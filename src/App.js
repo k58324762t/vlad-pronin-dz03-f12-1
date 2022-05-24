@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import MainPage from './page/mainpage/MainPage'
+import { Users } from './constructror/Users/Users'
+const user = [
+	{
+		name: 'dastan',
+		age: 25,
+		position: 'front-end',
+	},
+	{
+		name: 'jalia',
+		age: 16,
+		position: 'sAERF',
+	},
+	{
+		name: 'ruslan',
+		age: 17,
+		position: 'school',
+	},
+]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Users user={user} />
+			<MainPage />
+		</>
+	)
 }
 
-export default App;
+export default App
